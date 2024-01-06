@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".fragments.OtesListaSCFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="8dp">
+            <TextView
+                android:id="@+id/col1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+
+                android:text=" N°OT " />
+
+
+            <TextView
+                android:id="@+id/col2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/col1"
+                android:padding="10dp"
+
+                android:text="Fecha     " />
+
+            <TextView
+                android:id="@+id/col3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/col2"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text=" S. Cotizac." />
+
+            <TextView
+                android:id="@+id/col4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/col3"
+                android:padding="10dp"
+                android:text="  OT" />
+
+            <TextView
+                android:id="@+id/col5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/col4"
+                android:padding="10dp"
+                android:text="  Conf." />
+
+            <TextView
+                android:id="@+id/col6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/col5"
+                android:padding="10dp"
+                android:text="  Subir" />
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/progressBarOT"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+
+            android:layout_height="wrap_content" />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_otesoperarioslist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

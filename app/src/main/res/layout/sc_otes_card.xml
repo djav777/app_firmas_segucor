@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView
+        android:id="@+id/view_numero_ot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" nOT"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/view_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
+        android:layout_margin="10dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/view_sc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SC"
+        android:layout_margin="10dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/view_btn_solicitacot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_black_pdf_view"
+        android:layout_margin="10dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/view_btn_conformidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_highlight_off_24"
+        android:layout_margin="10dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/view_btn_subir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_cloud_upload_gray24"
+        android:layout_margin="10dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

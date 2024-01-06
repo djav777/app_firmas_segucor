@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.kyanogen.signature.Signature">
+
+    <item android:id="@+id/action_guarda"
+        android:title="@string/action_guarda"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:visible="false"
+        android:icon="@drawable/ic_baseline_save_white24"/>
+
+    <item android:id="@+id/action_limpiar"
+        android:title="@string/action_limpiar"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_delete_white24"/>
+</menu>
