@@ -25,6 +25,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import com.main.app_firmas_segucor.config.ApiConf;
+import com.main.app_firmas_segucor.session.SessionOperarios;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_login;
     private EditText etUser, etPassword;
 
+    private SessionOperarios sessionOperarios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     },
                     0);
         }
-
+        sessionOperarios = new SessionOperarios(MainActivity.this);
         btn_login = findViewById(R.id.btn_login);
         etUser = findViewById(R.id.etUser);
         etPassword = findViewById(R.id.etPassword);
@@ -87,13 +89,19 @@ public class MainActivity extends AppCompatActivity {
                         //Setear variable de session. Los del operador y del login
                         guardarDatosOperador(String.valueOf(login.getRut()),
                                 login.getDiv(), login.getNombre(), String.valueOf(login.getEmpresa()));
+
+                        sessionOperarios.loginSession(String.valueOf(login.getRut()),
+                                login.getDiv(), login.getNombre(), String.valueOf(login.getEmpresa()));
+
                         guardarSession();
+                        Intent intent = new Intent(MainActivity.this, PrincipalActivity.class);
+                        startActivity(intent);
                         /*Intent pantallaListadoSolicitudes = new Intent(getApplicationContext(), OtesSCActivity.class);
                         startActivity(pantallaListadoSolicitudes);*/
-                        OtesListaSCFragment newFragment=new OtesListaSCFragment();
-                        FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.principal_frame_container,newFragment);
-                        fragmentTransaction.commit();
+//                        OtesListaSCFragment newFragment=new OtesListaSCFragment();
+//                        FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+//                        fragmentTransaction.replace(R.id.principal_frame_container,newFragment);
+//                        fragmentTransaction.commit();
                     }
                 }
                 else

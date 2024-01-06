@@ -22,7 +22,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.kyanogen.signatureview.SignatureView;
+
+import com.github.gcacace.signaturepad.views.SignaturePad;
+//import com.kyanogen.signatureview.SignatureView;
 import com.main.app_firmas_segucor.MainActivity;
 import com.main.app_firmas_segucor.R;
 import com.main.app_firmas_segucor.camera.CameraXActivity;
@@ -45,7 +47,7 @@ public class SignatureActivity extends AppCompatActivity {
 
     private EditText etNombreFirma;
     private Button btnFirma;
-    private SignatureView signatureView;
+    private SignaturePad signatureView;
     private Context context;
     private File imgfile;
     private AlertDialog alertDialog;
@@ -151,7 +153,7 @@ public class SignatureActivity extends AppCompatActivity {
             case R.id.action_guarda:
                 return true;
             case R.id.action_limpiar:
-                signatureView.clearCanvas();
+                signatureView.clear();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

@@ -12,8 +12,8 @@ public class ApiConf {
     //private static final String BASE_URL ="http://10.0.2.2:5000/";
     //private static final String BASE_URL ="http://10.0.2.2:64976/";
     //private static final String BASE_URL ="http://192.168.0.154:64976/";
-    //private static final String BASE_URL ="http://api_formulario.ventasopencode.cl/";
-    private static final String BASE_URL="http://192.168.0.154:49522/";
+    private static final String BASE_URL ="http://api_formulario.ventasopencode.cl/";
+    //private static final String BASE_URL="http://192.168.1.85:49522/";
 
     public static CallInterface getData(){
         return getRetrofit(BASE_URL).create(CallInterface.class);

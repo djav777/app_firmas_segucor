@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
@@ -73,8 +74,9 @@ public class OtesListaSCFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_otes_lista_s_c, container, false);
-
+        ((AppCompatActivity) getActivity()).getSupportActionBar().show();
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Listado OTES");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         int colorBanner= Color.parseColor("#1754EC");
         setActionBarColor(colorBanner);
         otData = new OTData(getContext());
@@ -149,7 +151,11 @@ public class OtesListaSCFragment extends Fragment {
         return view;
 
     }
-
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
     @Override
     public void onCreateOptionsMenu(Menu menu, @NonNull MenuInflater inflater) {
        /* MenuInflater inflater =getMenuInflater();
